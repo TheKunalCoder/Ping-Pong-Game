@@ -3,7 +3,7 @@ class Player {
         this.name = null
         this.index = 0
         this.positionX = 0
-        this.positionY = 0
+        this.positionY = 200
         this.score = 0
     }
     getCount() {
@@ -36,10 +36,10 @@ class Player {
             score: this.score
         })
     }
-    getPlayerDetails() {
+     static getPlayerDetails() {
         database.ref("players").on("value", data => {
-            allplayers = data.val()
-            console.log(allplayers)
+            allPlayers = data.val()
+            console.log(allPlayers)
         })
     }
 }
